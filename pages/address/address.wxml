@@ -1,0 +1,38 @@
+<view class="container">
+  <radio-group bindchange="radioChange">
+    <view class="w-box" wx:for="{{addressList}}" wx:key="{{item.id}}">
+      <view class="w-num">
+        <text class="w-mz">{{item.name}}</text>
+        <text class="w-hm">{{item.phone}}</text>
+      </view>
+      <view class="w-add">
+        <view class="w-label" wx:if="{{item.remark!=''}}">{{item.remark}}</view>
+        <text class="w-text">{{item.province}} {{item.city}} {{item.area}} {{item.stress}}</text>
+      </view>
+      <view class="w-line">
+        <view class="w-mor">
+          <label class="radio">
+            <radio class="weui-check" value="{{index}}" checked="{{item.select}}" />
+            <icon class="w-ic" type="success" size="23" color="#e23a3a" wx:if="{{item.select}}">当前默认地址</icon>
+            <icon class="w-ic" type="circle" size="23" wx:if="{{!item.select}}"></icon>设为默认地址
+          </label>
+        </view>
+        <view class="w-editor">
+          <view class="w-change" data-id="{{item.id}}" bindtap="editAddress">
+            <image src="/images/0bj.png" />
+          </view>
+          <view class="w-delete" data-index="{{index}}" bindtap="deleteAddress">
+            <image src="/images/0sc.png" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </radio-group>
+
+  <view class="w-the">
+    <view class="w-new" bindtap="newAddress">新增收货地址</view>
+  </view>
+  <!--留白-->
+  <view class="w-white"></view>
+  <!-- 我的地址结束 -->
+</view>

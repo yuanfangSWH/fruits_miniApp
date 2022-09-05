@@ -1,0 +1,158 @@
+page {
+	background-color: #f6f6f6;
+}
+
+/*Tab*/
+.w-tab {
+	height: 90rpx;
+	width: 750rpx;
+	background-color: #ffffff;
+	border-top-width: 1rpx;
+	border-bottom-width: 1rpx;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #d4d2d2;
+	border-bottom-color: #d4d2d2;
+}
+
+.w-tab .w-module {
+	float: left;
+	height: 90rpx;
+	width: 150rpx;
+}
+
+/*选中*/
+.choose {
+	height: 83rpx;
+	width: 92rpx;
+	margin-right: auto;
+	margin-left: auto;
+	border-bottom-width: 7rpx;
+	border-bottom-style: solid;
+	border-bottom-color: #fe6861;
+	line-height: 83rpx;
+	color: #fe6861;
+	font-size: 26rpx;
+	text-align: center;
+}
+
+/*未选中*/
+.not {
+	height: 83rpx;
+	width: 92rpx;
+	margin-right: auto;
+	margin-left: auto;
+	line-height: 83rpx;
+	color: #5a5a5a;
+	font-size: 26rpx;
+	text-align: center;
+}
+
+/*内容*/
+.w-content {
+	width: 750rpx;
+}
+
+/*订单*/
+.w-content {
+	background-color: #FFFFFF;
+	width: 720rpx;
+	margin-top: 20rpx;
+	margin-right: auto;
+	margin-left: auto;
+  padding-bottom: 5px;
+	-moz-border-radius: 20rpx;
+	-webkit-border-radius: 20rpx;
+	border-radius: 20rpx;
+}
+
+.w-content .single-image {
+	height: 150rpx;
+	width: 170rpx;
+}
+
+.w-content .w-name {
+	font-size: 30rpx;
+	height: 90rpx;
+	width: 520rpx;
+	color: #393838;
+	line-height: 40rpx;
+}
+
+.w-content .w-state {
+	color: #33b5e2;
+	font-size: 28rpx;
+	line-height: 40rpx;
+	height: 40rpx;
+	width: 350rpx;
+}
+
+.w-content .w-meter {
+	font-size: 26rpx;
+	line-height: 37rpx;
+	height: 37rpx;
+	width: 700rpx;
+	color: #474747;
+	padding-left: 15rpx;
+}
+
+.w-content .w-bi {
+	font-size: 28rpx;
+	color: #727272;
+	height: 56rpx;
+	width: 190rpx;
+	line-height: 56rpx;
+	border: 1rpx solid #c6c6c6;
+	-moz-border-radius: 30rpx;
+	-webkit-border-radius: 30rpx;
+	border-radius: 30rpx;
+	background-color: #FFFFFF;
+	display: inline-block;
+}
+
+.w-flex {
+	height: 170rpx;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.w-flex .w-img {
+  height:150rpx;
+  width:170rpx;
+	padding-top: 15rpx;
+	padding-left: 15rpx;
+}
+
+.w-flex .w-yb {
+  flex: 1;
+	padding-top: 20rpx;
+	padding-left: 10rpx;
+}
+
+.w-b {
+	width: 705rpx;
+	height: 60rpx;
+	padding-top: 18rpx;
+	display: flex;
+}
+.w-time{
+  width: 290rpx;
+  height: 60rpx;
+  padding-left: 15rpx;
+  line-height:60rpx;
+  color: #ffcd5e;
+  font-size: 24rpx;
+}
+.w-but {
+  display: flex;
+  flex: 1;
+  height: 60rpx;
+}
+.r-zw{
+  margin-right: 15rpx;
+}
+.w-zwf{
+  height: 60rpx;
+  flex: 1;
+}

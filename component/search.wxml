@@ -1,0 +1,8 @@
+<view class="w-souk">
+  <view class="w-sbg">
+    <input class="w-srk" placeholder="搜索" type="text" value="{{search}}" bindconfirm="onSearch" bindinput="inputTyping" confirm-type="search"/>
+    <view class="w-anss" bindtap="onSearch">
+      <image class="anss-image" mode="aspectFit" src="/images/shout.png" />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="w-box" wx:for="{{addressList}}" wx:key="{{item.id}}" data-index="{{index}}" bind:tap="select">
+    <view class="w-num">
+      <text class="w-mz">{{item.name}}</text>
+      <text class="w-hm">{{item.phone}}</text>
+      <view class="w-vibj">
+      <view class="w-change" data-id="{{item.id}}" bindtap="editAddress">
+        <image src="/images/0bj.png" />
+      </view>
+    </view>
+    </view>
+    <view class="w-add">
+      <view class="w-label" wx:if="{{item.remark!=''}}">{{item.remark}}</view>
+      <text class="w-text">{{item.province}} {{item.city}} {{item.area}} {{item.stress}}</text>
+    </view>
+  </view>
+  <view class="w-the">
+    <view class="w-new" bindtap="newAddress">新增收货地址</view>
+  </view>
+  <!--留白-->
+  <view class="w-white"></view>
+  <!-- 我的地址结束 -->
+</view>

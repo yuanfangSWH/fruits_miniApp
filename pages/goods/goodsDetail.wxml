@@ -1,0 +1,122 @@
+<!--pages/layout/goodsDetail.wxml-->
+<view class="page">
+  <view class="hd">
+    <view class="goods-info">
+      <view class="pic">
+        <image mode="aspectFit" class="pic" src="{{goodsDetail.image ||'/images/lossi.png'}}"></image>
+      </view>
+      <view class="price text-red">
+        ￥{{goodsDetail.price}}
+        <view class="tags">
+          <text class="tag">包邮</text>
+          <text class="tag">新鲜采摘</text>
+          <text class="tag">急速发货</text>
+        </view>
+      </view>
+      <view class="title">{{goodsDetail.name}}</view>
+      <view class="box1 weui-flex">
+        <view class="weui-flex__item">快递: 免运费</view>
+        <view class="weui-flex__item text-center">月销{{goodsDetail.sold}}</view>
+        <view class="weui-flex__item"></view>
+      </view>
+    </view>
+  </view>
+  <!-- 内容区 -->
+  <view class="bd">
+    <view class="nav-bar" bind:tap="changeType">
+      <view class="nav {{showType=='detail'?'active':''}}" data-type="detail" style="margin-right: 10px;">商品详细</view>
+      <view class="nav {{showType=='comments'?'active':''}}" data-type="comments">用户评价</view>
+    </view>
+    <view class="detail content" hidden="{{showType!='detail'}}">
+      <view class="infos">
+        <view class="item" wx:if="{{goodsDetail.weight}}">重量：{{goodsDetail.weight}}</view>
+        <view class="item" wx:if="{{goodsDetail.pack}}">包装方式：{{goodsDetail.pack}}</view>
+        <view class="item" wx:if="{{goodsDetail.expiration}}">保质期：{{goodsDetail.expiration}}</view>
+        <view class="item" wx:if="{{goodsDetail.stockpile}}">贮存方法：{{goodsDetail.stockpile}}</view>
+      </view>
+      <view class="pics">
+        <image mode="widthFix" wx:for="{{goodsDetail.images}}" src="{{item}}" wx:key="$index"></image>
+      </view>
+    </view>
+    <view class="comments content" hidden="{{showType!='comments'}}">
+      <!-- <view class="comment">
+        <view class="box2 weui-flex">
+          <view class="avatar">
+            <image mode="aspectFit" src="/images/yhmrtx.png"></image>
+          </view>
+          <view class="weui-flex__item">
+            <view class="name">ID：元芳</view>
+            <view class="text">不错，每个果都挺大的，没发现坏的，下单后2天就到了，速度很快，下次还会来买</view>
+            <view class="date">2018-10-14</view>
+          </view>
+        </view>
+      </view>
+      <view class="comment">
+        <view class="box2 weui-flex">
+          <view class="avatar">
+            <image mode="aspectFit" src="/images/yhmrtx.png"></image>
+          </view>
+          <view class="weui-flex__item">
+            <view class="name">ID：平平淡淡</view>
+            <view class="text">还行，第一次吃还不习惯，不过客服服务很好</view>
+            <view class="date">2018-10-14</view>
+          </view>
+        </view>
+      </view> -->
+    </view>
+  </view>
+  <!-- 底部开始 -->
+  <view class="pop" hidden="{{isHidePop}}">
+    <view class="shaow" bind:tap="hidePop"></view>
+    <view class="group">
+      <view class="head weui-flex" style="align-items: center;">
+        <view class="pic">
+          <image mode="aspectFit" src="{{goodsDetail.image || '/images/lossi.png'}}"></image>
+        </view>
+        <view class="info weui-flex__item">
+          <view class="red text-red">￥{{goodsDetail.price}}</view>
+          <view class="text-666" style="font-size: 12px;">库存{{goodsDetail.number}}</view>
+        </view>
+        <view class="close" bind:tap="hidePop">
+          <i-icon type="close" size="26" color="#dddddd" />
+        </view>
+      </view>
+      <view class="content">
+        <view class="standard">
+          <view class="title" style="font-size: 16px;">规格</view>
+          <view class="tags">
+            <text class="tag">默认</text>
+          </view>
+        </view>
+        <view class="number weui-flex">
+          <view class="weui-flex__item">
+            <view class="big">购买数量：</view>
+          </view>
+          <view>
+            <number number="{{number}}" bind:change="onChange"></number>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="footer weui-flex">
+    <view class="weui-flex__item">
+      <view class="item" bind:tap="goCart">
+        <image src="/images/shopcart2.png" mode="aspectFit"></image>
+        <view class="text">购物车</view>
+      </view>
+      <view class="item" bind:tap="like">
+        <image src="{{goodsDetail.isLike ? '/images/like_on.png' : '/images/like.png'}}" mode="aspectFit"></image>
+        <view class="text">收藏</view>
+      </view>
+    </view>
+    <view class="btns">
+      <view class="btn left" bind:tap="addToCart">
+        加入购物篮
+      </view>
+      <view class="btn right" bind:tap="takeOrder">
+        立即下单
+      </view>
+    </view>
+  </view>
+</view>

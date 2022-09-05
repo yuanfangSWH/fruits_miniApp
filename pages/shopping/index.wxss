@@ -1,0 +1,263 @@
+/*标题*/
+
+.w-title {
+  height: 77rpx;
+  width: 720rpx;
+  margin-right: auto;
+  margin-left: auto;
+  border-bottom-width: 1rpx;
+  border-bottom-style: solid;
+  border-bottom-color: #4d4d4c;
+  margin-bottom: 20rpx;
+}
+
+.w-title .t_text1 {
+  margin-left: 15rpx;
+  font-size: 32rpx;
+  line-height: 77rpx;
+  color: #4d4d4c;
+  display: block;
+  height: 100%;
+  width: 220rpx;
+  float: left;
+}
+
+.w-title .t_text2 {
+  font-size: 28rpx;
+  line-height: 77rpx;
+  color: #919191;
+  text-decoration: underline;
+  display: block;
+  height: 100%;
+  width: 160rpx;
+  float: right;
+}
+
+/* 旧商品样式 */
+.goods-list {
+  padding: 10px 5px 10px 0;
+}
+
+.goods-list .goods {
+  margin-top: 14px;
+}
+
+.goods .image {
+  margin-right: 5px;
+  max-height: 120px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.goods .image image {
+  display: block;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+}
+
+.goods .weui-cell {
+  padding: 0;
+}
+
+.goods .shadow {
+  width: 100%;
+  box-shadow: 1px 1px 1px 2px #eee;
+  padding: 4px 0px 4px 4px;
+}
+
+.goods .content {
+  position: relative;
+  margin-right: 5px;
+}
+
+.goods .content .title {
+  color: #1c2438;
+  font-size: 15px;
+  line-height: 20px;
+  max-height: 44px;
+  overflow: hidden;
+  /* max-width: 210px; */
+}
+
+.goods .content .intro {
+  font-size: 12px;
+  color: #999;
+  max-height: 3em;
+  overflow: hidden;
+}
+
+.goods .content .footer {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 2px;
+}
+
+.goods .content .price {
+  color: #ff461f;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.empty image {
+  margin-top: 100px;
+  width: 64px;
+  max-height: 64px;
+}
+
+.empty .tip {
+  font-size: 14px;
+  color: #999;
+}
+
+/*商品css1*/
+/* .w-goods {
+  height: 170rpx;
+  width: 720rpx;
+  margin-right: auto;
+  margin-left: auto;
+  border-bottom-width: 1rpx;
+  border-bottom-style: solid;
+  border-bottom-color: #d4d2d2;
+  margin-bottom: 20rpx;
+  display: flex;
+}
+
+.w-goods .goods_image {
+  height: 150rpx;
+  width: 170rpx;
+}
+
+.w-zbk {
+  height: 150rpx;
+  width: 170rpx;
+}
+
+.w-goods .g-title {
+  white-space: normal;
+  width: 535rpx;
+  font-size: 16px;
+  line-height: 38rpx;
+  color: #333;
+  height: 85rpx;
+}
+
+.w-goods .g-price {
+  height: 55rpx;
+  width: 530rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.w-goods .g-amount {
+  height: 47rpx;
+  width: 270rpx;
+}
+
+.w-goods .g-amount .reduction {
+  font-size: 24rpx;
+  line-height: 42rpx;
+  background-color: #ffcd5e;
+  height: 47rpx;
+  width: 47rpx;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  float: left;
+  border-radius: 10rpx;
+  padding-left: 0rpx;
+  padding-right: 0rpx;
+}
+
+.w-goods .g-amount .g-input {
+  font-size: 28rpx;
+  line-height: 45rpx;
+  display: block;
+  float: left;
+  height: 45rpx;
+  width: 46rpx;
+  margin-right: 13rpx;
+  margin-left: 13rpx;
+  text-align: center;
+  color: #414141;
+  border: 1rpx solid #ccc6c6;
+  min-height: 45rpx;
+}
+
+.w-goods .g-amount .add {
+  font-size: 42rpx;
+  line-height: 40rpx;
+  background-color: #ffcd5e;
+  height: 47rpx;
+  width: 47rpx;
+  text-align: center;
+  color: #fff;
+  float: left;
+  border-radius: 10rpx;
+  padding-left: 0rpx;
+  padding-right: 0rpx;
+}
+
+.w-goods .g-amount .g-text {
+  color: #757373;
+  font-size: 28rpx;
+  float: left;
+  line-height: 38rpx;
+  height: 38rpx;
+  width: 85rpx;
+  padding-top: 8rpx;
+}
+
+.w-ybk {
+  flex: 1;
+  padding-left: 20rpx;
+  padding-top: 10rpx;
+}
+
+.g-pr {
+  width: 280rpx;
+  height: 55rpx;
+  font-size: 28rpx;
+  color: #e23a3a;
+  line-height: 55rpx;
+} */
+
+
+/*合计*/
+.w-total {
+  background-color: #f5f5f5;
+  height: 85rpx;
+  width: 750rpx;
+  position: fixed;
+  bottom: 0rpx;
+}
+
+.w-total .total {
+  height: 85rpx;
+  font-size: 34rpx;
+  line-height: 85rpx;
+  float: left;
+  margin-left: 15rpx;
+}
+
+.w-total .total .w-text {
+  color: #e23a3a;
+}
+
+.w-total .payment {
+  font-size: 34rpx;
+  line-height: 85rpx;
+  color: #fff;
+  background-color: #33b5e2;
+  text-align: center;
+  float: right;
+  height: 85rpx;
+  width: 270rpx;
+}
+
+.blank {
+  height: 85rpx;
+  width: 100%;
+}

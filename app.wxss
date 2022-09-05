@@ -1,0 +1,80 @@
+/**app.wxss**/
+@import 'style/weui.wxss';
+
+.container {
+  height: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.w-flex-g {
+  flex: 1;
+}
+
+.text-wx {
+  color: #09bb07 !important;
+}
+
+.text-red {
+  color: #fe1e20 !important;
+}
+
+.text-333 {
+  color: #333 !important;
+}
+
+.text-666 {
+  color: #666 !important;
+}
+
+.text-999 {
+  color: #999 !important;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.no-more {
+  color: #999;
+  text-align: center;
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+/*清除border/input自带样式*/
+
+button::after {
+  border: none;
+}
+
+input {
+  outline: none;
+  border: none;
+  list-style: none;
+}
+
+/*留空*/
+
+.w-white {
+  height: 100rpx;
+  width: 750rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #969494;
+  font-size: 30rpx;
+}

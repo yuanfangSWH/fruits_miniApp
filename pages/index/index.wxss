@@ -1,0 +1,243 @@
+/**index.wxss**/
+
+/*幻灯片*/
+
+.w-rolling {
+  width: 750rpx;
+  position: relative;
+}
+
+.w-rolling .slide-image {
+  height: 100%;
+  width: 100%;
+}
+
+/*用来包裹所有的小圆点  */
+
+.dots {
+  width: 150rpx;
+  height: 12rpx;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 315rpx;
+  bottom: 8rpx;
+}
+
+/*未选中时的小圆点样式 */
+
+.dot {
+  width: 35rpx;
+  height: 12rpx;
+  margin-right: 10rpx;
+  background-color: #dcd8d9;
+}
+
+/*选中以后的小圆点样式  */
+
+.active {
+  width: 35rpx;
+  height: 12rpx;
+  margin-right: 10rpx;
+  background-color: #515151;
+}
+
+/*每日特惠*/
+
+.w-title {
+  height: 82rpx;
+  width: 378rpx;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 25rpx;
+  padding-bottom: 25rpx;
+}
+
+.w-title .w-vice {
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+}
+
+.w-title .w-imag {
+  height: 26rpx;
+  width: 100%;
+}
+
+.w-imag .title-image {
+  height: 100%;
+  width: 100%;
+}
+
+/*商品css1*/
+
+.w-commodity {
+  width: 710rpx;
+  height: 370rpx;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.w-commodity .information {
+  width: auto;
+  height: 370rpx;
+  overflow: hidden;
+}
+
+.w-commodity .w-img {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 370rpx;
+  width: 230rpx;
+  margin-right: 9rpx;
+  position: relative;
+  display: inline-block;
+}
+
+.w-commodity .w-img .zzc {
+  height: 166rpx;
+  width: 230rpx;
+  background-color: #000;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 30;
+  position: absolute;
+  bottom: 0rpx;
+}
+
+.w-commodity .w-img .zzc .z-view1 {
+  height: 80rpx;
+  width: 192rpx;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  color: #fff;
+  font-size: 34rpx;
+  line-height: 40rpx;
+  padding-top: 12rpx;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.w-commodity .w-img .zzc .z-view2 {
+  display: block;
+  height: 52rpx;
+  width: 192rpx;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  color: #ffcd5e;
+  font-size: 42rpx;
+  line-height: 52rpx;
+}
+
+.information .w-img .v-image {
+  display: block;
+  position: absolute;
+  height: 370rpx;
+  width: 230rpx;
+}
+
+/*保证*/
+
+.w-ensure {
+  height: 33rpx;
+  width: 597rpx;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20rpx;
+}
+
+.w-ensure .ensure-image {
+  height: 100%;
+  width: 100%;
+}
+
+/*商品css2*/
+
+.w-fresh {
+  width: 710rpx;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10rpx;
+}
+
+.w-fresh .commodity {
+  width: 100%;
+  height: 200rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+}
+
+.c-imvi {
+  height: 200rpx;
+  width: 270rpx;
+}
+
+.w-fresh .c-image {
+  height: 200rpx;
+  width: 270rpx;
+}
+
+.w-fresh .letter {
+  flex: 1;
+  height: 200rpx;
+}
+
+.w-fresh .letter .c_dl {
+  text-indent: 15rpx;
+}
+
+.w-fresh .letter .c_view1 {
+  width: 435rpx;
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.w-fresh .letter .c_view2 {
+  font-size: 40rpx;
+  line-height: 44rpx;
+  padding-top: 22rpx;
+  color: #e23a3a;
+}
+
+.w-fresh .letter .c_view3 {
+  font-size: 15px;
+  line-height: 18px;
+  padding-top: 8px;
+  color: #969494;
+}
+
+.w-fresh .letter text {
+  font-size: 30rpx;
+}
+
+.w-fresh .letter .purchase {
+  background-color: #e23a3a;
+  -moz-border-radius: 50rpx;
+  -webkit-border-radius: 50rpx;
+  border-radius: 50rpx;
+  height: 83rpx;
+  width: 83rpx;
+  margin-right: 10rpx;
+  margin-top: 35rpx;
+}
+
+.w-fresh .letter .p-image {
+  height: 100%;
+  width: 100%;
+}
+
+.c-fl {
+  display: flex;
+}
+
+.c-fll {
+  flex: 1;
+}

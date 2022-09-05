@@ -1,0 +1,96 @@
+/* pages/order/detail.wxss */
+
+page {
+  background-color: #eee;
+}
+
+.address {
+  background-color: white;
+  padding: 10px;
+  margin-top: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.address .content {
+  padding-left: 5px;
+}
+
+.address .user text {
+  font-size: 16px;
+}
+
+.address .addr {
+  line-height: 18px;
+}
+
+.address .addr text {
+  font-size: 13px;
+  color: #666;
+}
+
+.goods {
+  padding-left: 10px;
+  background-color: white;
+}
+
+.goods .item {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.goods .item:last-child {
+  border-bottom: none;
+}
+
+.goods .item image {
+  display: block;
+  flex: 0 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 2px;
+}
+
+.goods .item .detail {
+  padding-left: 5px;
+  max-width: 100%;
+}
+
+.goods .item .name {
+  font-size: 16px;
+  line-height: 18px;
+  max-height: 36px;
+  overflow: hidden;
+}
+
+.goods .item .number {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.goods .item .number .price {
+  margin-left: 10px;
+}
+
+.goods .item .money {
+  color: #e23a3a;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.bd .info {
+  margin-top: 10px;
+  background-color: white;
+}
+
+.bd .info .item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.bd .info .item:last-child {
+  border-bottom: none;
+}
+
+.bd .info .label {
+  font-size: 13px;
+}

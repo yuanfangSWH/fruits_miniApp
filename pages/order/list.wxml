@@ -1,0 +1,72 @@
+<view class="container">
+  <!--搜索-->
+  <!-- <component-search search="{{search}}" ></component-search> -->
+  <!--tab-->
+  <view class="w-tab">
+    <view class="w-module">
+      <view class="not{{rollingSwiper == 0 ? ' choose' : ''}}" data-current="0" bindtap="swichNav">全部</view>
+    </view>
+    <view class="w-module">
+      <view class="not{{rollingSwiper == 1 ? ' choose' : ''}}" data-current="1" bindtap="swichNav">待付款</view>
+    </view>
+    <view class="w-module">
+      <view class="not{{rollingSwiper == 2 ? ' choose' : ''}}" data-current="2" bindtap="swichNav">待发货</view>
+    </view>
+    <view class="w-module">
+      <view class="not{{rollingSwiper == 3 ? ' choose' : ''}}" data-current="3" bindtap="swichNav">已发货</view>
+    </view>
+    <view class="w-module">
+      <view class="not{{rollingSwiper == 4 ? ' choose' : ''}}" data-current="4" bindtap="swichNav">已完成</view>
+    </view>
+  </view>
+
+  <!--内容-->
+  <swiper autoplay="{{roll}}" duration="500" current="{{rollingSwiper}}" bindchange="swiperContent" style="height: {{height}}px" >
+    <swiper-item wx:for="{{orders}}" wx:for-item="orderDetail" wx:key="$index">
+      <div class="getThisHeight">
+        <!--渲染开始-->
+        <view class="w-content" wx:for="{{orderDetail}}" wx:key="{{item.id}}">
+          <view wx:for="{{item.detail}}" wx:for-item="detail" wx:key="$index">
+            <view class="w-flex" bind:tap="goDetail" data-id="{{item.id}}">
+              <view class="w-img">
+                <image class="single-image" src="{{detail.image ||'/images/loss.png'}}" />
+              </view>
+              <view class="w-yb">
+                <view class="w-name" data-id="{{item.id}}" >{{detail.name}}</view>
+                <view class="w-state" wx:if="{{item.status == 0}}" >订单状态：已取消</view>
+                <view class="w-state" wx:if="{{item.status == 1}}" >订单状态：待付款</view>
+                <view class="w-state" wx:if="{{item.status == 2}}" >订单状态：待发货</view>
+                <view class="w-state" wx:if="{{item.status == 3}}" >订单状态：已发货</view>
+                <view class="w-state" wx:if="{{item.status == 4}}" >订单状态：已完成</view>
+              </view>
+            </view>
+            <view class="w-meter">共{{item.total_number}}份商品   合计：{{item.total_money}}元</view>
+            </view>
+          <view class="w-b">
+            <view class="w-time">{{item.create_time}}</view>
+            <view class="w-but" wx:if="{{item.status == 0}}" >
+              <view class="w-zwf"></view>
+              <button class="w-bi" data-index="{{index}}" bindtap="deleteOrder">删除订单</button>
+            </view>
+            <view class="w-but" wx:if="{{item.status == 1}}" >
+              <button class="w-bi r-zw" data-index="{{index}}" bindtap="cancelOrder">取消订单</button>
+              <button class="w-bi" data-index="{{index}}" bind:tap="pay">立即付款</button>
+            </view>
+            <view class="w-but" wx:if="{{item.status == 3}}" >
+              <view class="w-zwf" ></view>
+              <button class="w-bi" data-index="{{index}}">查看物流</button>
+            </view>
+            <view class="w-but" wx:if="{{item.status == 4}}" >
+              <button class="w-bi r-zw" data-index="{{index}}">联系客服</button>
+              <button class="w-bi" data-index="{{index}}" bindtap="deleteOrder" >删除订单</button>
+            </view>
+          </view>
+        </view>
+        <!-- 提示到底 -->
+        <view class="no-more" wx:if="{{noMore}}">没有更多了</view>
+      </div>
+     <!--渲染结束-->
+    </swiper-item>
+  </swiper>
+  <!--订单结束-->
+</view>

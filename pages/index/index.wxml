@@ -1,0 +1,91 @@
+<!--index.wxml-->
+<view class="container">
+  <!--搜索-->
+  <component-search search="{{search}}" ></component-search>
+  <!--滚动图-->
+  <view class="w-rolling">
+    <!--是否显示圆点，自动播放， 间隔时间， 监听滚动和点击事件-->
+    <swiper autoplay="true" duration="1000" current="{{rollingSwiper}}" bindchange="swiperChange">
+      <!--swiper-item只能包含一个节点再多会自动删除-->
+      <swiper-item wx:for="{{slideData.activity}}" wx:key="$index" bind:tap="goDetail" data-id="{{item.goods_id}}">
+        <image src="{{item.image}}" class="slide-image" mode="scaleToFill" />
+      </swiper-item>
+    </swiper>
+    <!--重置小圆点的样式  -->
+    <view class="dots">
+      <view wx:for="{{slideData.activity}}" wx:key="$index">
+        <view class="dot{{index == rollingSwiper ? ' active' : ''}}"></view>
+      </view>
+    </view>
+  </view>
+  <!--标题-->
+  <view class="w-title">
+    <view class="w-vice">每日特惠</view>
+    <view class="w-imag">
+      <image class="title-image" src="/images/bty.png" />
+    </view>
+  </view>
+  <!--商品模块1-->
+  <view class="w-commodity">
+    <scroll-view class="information" scroll-x="true">
+      <view class="w-img" wx:for="{{slideData.onsale}}" wx:key="$index" bind:tap="goDetail" data-id="{{item.goods_id}}">
+        <image class="v-image" src="{{item.image}}" />
+        <view class="zzc">
+          <view class="z-view1">{{item.name}}</view>
+          <view class="z-view2">￥{{item.price}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!--标题-->
+  <view class="w-title">
+    <view class="w-vice">推荐榜单</view>
+    <view class="w-imag">
+      <image class="title-image" src="/images/bty.png" />
+    </view>
+  </view>
+  <!--商品模块2-->
+  <view class="w-commodity">
+    <scroll-view class="information" scroll-x="true">
+      <view class="w-img" wx:for="{{slideData.recommend}}" wx:key="$index" bind:tap="goDetail" data-id="{{item.goods_id}}">
+        <image class="v-image" src="{{item.image}}" />
+        <view class="zzc">
+          <view class="z-view1">{{item.name}}</view>
+          <view class="z-view2">￥{{item.price}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!--标题-->
+  <view class="w-title">
+    <view class="w-vice">新鲜水果</view>
+    <view class="w-imag">
+      <image class="title-image" src="/images/bty.png" />
+    </view>
+  </view>
+  <view class="w-ensure">
+    <image class="ensure-image" src="/images/bz01.png" />
+  </view>
+  <!--商品模块3-->
+  <view class="w-fresh">
+    <!--渲染开始-->
+    <view class="commodity" wx:for="{{hotList}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap="goDetail" >
+      <view class="c-imvi" ><image  class="c-image" src="{{item.image ||'/images/loss.png'}}" /></view>
+      <view class="letter">
+        <view class="c_view1 c_dl">{{item.name}}</view>
+        <view class="c-fl">
+          <view class="c-fll" >
+            <view class="c_view2 c_dl"> <text>￥</text>{{item.price}}</view>
+            <view class="c_view3 c_dl">已有{{item.sold}}人购买</view>
+          </view>
+          <view class="purchase" >
+            <image class="p-image" src="/images/gwl01.png" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--渲染结束-->
+  </view>
+
+  <!--首页结束-->
+</view>

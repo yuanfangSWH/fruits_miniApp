@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/order/list",
+    "pages/personal/index",
+    "pages/shopping/index",
+    "pages/goods/goodsDetail",
+    "pages/list/index",
+    "pages/address/address",
+    "pages/address/editor",
+    "pages/payment/payment",
+    "pages/payment/address",
+    "pages/personal/like",
+    "pages/order/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "鲜达果品",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#4d4d4c",
+    "selectedColor": "#e23a3a",
+    "backgroundColor": "#f8f8f8",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/sy.png",
+        "selectedIconPath": "images/sy_select.png"
+      },
+      {
+        "pagePath": "pages/shopping/index",
+        "text": "购物篮",
+        "iconPath": "images/gwl.png",
+        "selectedIconPath": "images/gwl_select.png"
+      },
+      {
+        "pagePath": "pages/personal/index",
+        "text": "个人中心",
+        "iconPath": "images/grzx.png",
+        "selectedIconPath": "images/grzx_select.png"
+      }
+    ]
+  }
+}

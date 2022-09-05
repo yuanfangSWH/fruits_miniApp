@@ -1,0 +1,26 @@
+<!-- pages/personal/like.wxml -->
+<view class="page">
+  <view class="likes">
+    <view class="commodity" wx:for="{{goodsList}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap="goDetail">
+      <view class="c-imvi">
+        <image class="c-image" src="{{item.image ||'/images/loss.png'}}" />
+      </view>
+      <view class="letter">
+        <view class="c_view1 c_dl">{{item.name}}</view>
+        <view class="c-fl">
+          <view class="c-fll">
+            <view class="c_view2 c_dl">
+              <text>￥</text>
+              {{item.price}}
+            </view>
+            <view class="c_view3 c_dl">已有{{item.sold}}人购买</view>
+          </view>
+          <view class="purchase">
+            <image class="p-image" src="/images/gwl01.png" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="text-666 no-data" wx:if="{{goodsList.length==0}}">您还没收藏商品呢，快去收藏吧~</view>
+  </view>
+</view>

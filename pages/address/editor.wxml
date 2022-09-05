@@ -1,0 +1,47 @@
+<view class="container">
+  <view class="w-box">
+    <view class="w-input">
+      <view class="w-bt">收货人</view>
+      <view class="w-sr">
+        <input class="w-inp" type="text" confirm-type="next" placeholder="收货人姓名" value="{{addressData.name}}" data-key="name" bindinput="onInput" bindblur="onInput"></input>
+      </view>
+    </view>
+    <view class="w-input">
+      <view class="w-bt">手机号</view>
+      <view class="w-sr">
+        <input class="w-inp" type="text" confirm-type="next" placeholder="请输入手机号" value="{{addressData.phone}}" data-key="phone" bindinput="onInput" bindblur="onInput"></input>
+      </view>
+    </view>
+    <view class="w-input">
+      <view class="w-bt">所在地区</view>
+      <view class="w-sr">
+        <picker class="w-inp" mode="region" bindchange="bindRegionChange" >
+          <view class="picker">
+          {{addressData.province +'/'+ addressData.city +'/'+ addressData.area}}
+          </view>
+        </picker>
+      </view>
+      <view class="w-arrow">
+        <image class="arrow" src="/images/jt01.png" />
+      </view>
+    </view>
+    <view class="w-input itext">
+      <view class="w-bt">详细地址</view>
+      <view class="w-sr itext">
+        <textarea class="w-texta" placeholder="输入详细地址" value="{{addressData.stress}}" data-key="stress" bindinput="onInput" bindblur="onInput"></textarea>
+      </view>
+    </view>
+    <view class="w-input">
+      <view class="w-bt">标签</view>
+      <view class="w-sr">
+        <input class="w-inp" type="text" confirm-type="next" placeholder="地址标签（选填）" value="{{addressData.remark}}" data-key="remark" bindinput="onInput" bindblur="onInput"></input>
+      </view>
+    </view>
+  </view>
+
+  <view class="w-the">
+    <view class="w-new" bindtap="save">保存</view>
+  </view>
+
+  <!-- 地址编辑结束 -->
+</view>

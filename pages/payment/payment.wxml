@@ -1,0 +1,61 @@
+<view class="container">
+  <!-- 地址 -->
+  <view class="w-vie" wx:if="{{hasAddress}}" bind:tap="choiceAddress">
+    <view class="w_package">
+      <view class="w-i-phone">
+        <text class="w-mz">{{address.name}}</text>
+        <text class="w-hm">{{address.phone}}</text>
+      </view>
+      <view class="w-add-view">
+        <view class="w-label" wx:if="{{address.remark}}">{{address.remark}}</view>
+        <text class="w-text">{{address.province + address.city + address.area + address.stress}}</text>
+      </view>
+    </view>
+    <view class="w-arrow">
+      <image class="w-image" src="/images/jt01.png" />
+    </view>
+  </view>
+  <!-- 请选择地址 -->
+  <view class="w-choose" wx:else bind:tap="choiceAddress">
+    <view class="c-choose">请选择收货地址</view>
+    <view class="w-arrow">
+      <image class="w-image" src="/images/jt01.png" />
+    </view>
+  </view>
+  <!-- 商品信息 -->
+  <view class="w-goods">
+    <view class="w-tb" wx:for="{{goodsList}}" wx:key="{{item.id}}">
+      <view class="w-ima-g">
+        <image class="w-image-g" src="{{item.image || '/images/lossi.png'}}" />
+      </view>
+      <view class="w-detailed">
+        <view class="w-g-name">{{item.name}}</view>
+        <view class="w-g-number">
+          <text class="w-skg">数量：{{item.number}}</text>
+          <text>单价：{{item.price}}</text>
+        </view>
+        <view class="w-g-total">
+        ￥{{item.totalMoney}}
+        <!-- <text class="w-psf">（配送10.0元）</text> -->
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 备注 -->
+  <view class="w-note">
+    <view class="w-nbz">备注</view>
+    <view class="w-nly">
+      <textarea class="w-texta" placeholder="商家留言（选填）" bindinput="inputRemark" bindblur="inputRemark"></textarea>
+    </view>
+  </view>
+  <!-- 合计 -->
+  <view class="blank"></view>
+  <view class="w-total">
+    <view class="total">
+      合计：
+      <text class="w-text">{{totalMoney}}元</text>
+    </view>
+    <view class="payment" bind:tap="takeOrder">提交订单</view>
+  </view>
+  <!-- 购物篮结束 -->
+</view>

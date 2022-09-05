@@ -1,0 +1,74 @@
+<view class="container">
+  <!-- 搜索 -->
+  <component-search search="{{search}}" ></component-search>
+  <view class="w-gradually">
+    <view class="w-portrait">
+      <view class="p-vi">
+        <view class="p-bg">
+          <image class="yh-image" src="{{userInfo.avatarUrl}}" />
+        </view>
+      </view>
+    </view>
+    <button open-type="getUserInfo" bindgetuserinfo="getuserinfo" wx:if="{{!hasInfo}}" class="w-login">登录/注册</button>
+    <text class="w-login" wx:else>{{userInfo.nickName}}</text>
+  </view>
+  <view class="w-order">
+    <view class="i-order">
+      <view class="w-ti">我的订单</view>
+      <view class="w-flex-g"></view>
+      <view class="w-td" data-type="0" bindtap="onOrder">
+        <view class="w-text">查看全部订单</view>
+        <image class="t-image" src="/images/jt01.png" />
+      </view>
+    </view>
+    <view class="w-options weui-flex">
+      <view class="o-mk weui-flex__item" data-type="1" bindtap="onOrder">
+        <image class="o-image1 uimage" src="/images/dfk.png" />
+        <view class="o-xw">待付款</view>
+      </view>
+      <view class="o-mk weui-flex__item" data-type="2" bindtap="onOrder">
+        <image class="o-image2 uimage" src="/images/dfh.png" />
+        <view class="o-xw">待发货</view>
+      </view>
+      <view class="o-mk weui-flex__item" data-type="3" bindtap="onOrder">
+        <image class="o-image3 uimage" src="/images/yfh.png" />
+        <view class="o-xw">已发货</view>
+      </view>
+      <view class="o-mk weui-flex__item" data-type="4" bindtap="onOrder">
+        <image class="o-image4 uimage" src="/images/ywc.png" />
+        <view class="o-xw">已完成</view>
+      </view>
+    </view>
+  </view>
+  <view class="w-bar" bindtap="onAddress">
+    <view class="b-ti">我的收货地址</view>
+    <view class="w-flex-g"></view>
+    <view class="b-imagg">
+      <image class="b-image" src="/images/jt01.png" />
+    </view>
+  </view>
+  <view class="w-bar" bindtap="onLike">
+    <view class="b-ti">收藏夹</view>
+    <view class="w-flex-g"></view>
+    <view class="b-imagg">
+      <image class="b-image" src="/images/jt01.png" />
+    </view>
+  </view>
+  <view class="w-bar">
+    <view class="b-ti">联系客服</view>
+    <view class="w-flex-g"></view>
+    <view class="b-imagg">
+      <image class="b-image" src="/images/jt01.png" />
+    </view>
+  </view>
+  <view class="w-bar">
+    <view class="b-ti">关于我们</view>
+    <view class="w-flex-g"></view>
+    <view class="b-imagg">
+      <image class="b-image" src="/images/jt01.png" />
+    </view>
+  </view>
+  <!-- 留白 -->
+  <!-- <view class="w-white"></view> -->
+  <!-- 个人中心结束 -->
+</view>

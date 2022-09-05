@@ -1,0 +1,43 @@
+/*搜索*/
+
+.w-souk {
+  width: 750rpx;
+  height: 54rpx;
+  background-color: #fff;
+  padding-top: 5px;
+  padding-bottom: 8px;
+}
+
+.w-souk .w-srk {
+  height: 30px;
+  width: 615rpx;
+  padding-left: 25rpx;
+  border: none;
+  font-size: 13px;
+  line-height: 30px;
+  color: #ababaa;
+  flex: 1;
+}
+
+.w-sbg {
+  background-color: #eaeaea;
+  -moz-border-radius: 30rpx;
+  -webkit-border-radius: 30rpx;
+  border-radius: 30rpx;
+  height: 30px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.w-souk .w-anss {
+  display: inline-block;
+  width: 30px;
+}
+
+.w-souk .anss-image {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  margin-top: 2px;
+}

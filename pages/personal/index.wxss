@@ -1,0 +1,191 @@
+page {
+	background-color: #f6f6f6;
+}
+
+/*用户信息*/
+.w-gradually {
+	height: 350rpx;
+	width: 750rpx;
+	margin-bottom: 20rpx;
+	background: -webkit-linear-gradient(120deg, #fbab4a, #fe6861);
+	/* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(120deg, #fbab4a, #fe6861);
+	/* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(120deg, #fbab4a, #fe6861);
+	/* Firefox 3.6 - 15 */
+	background: linear-gradient(120deg, #fbab4a, #fe6861);
+	/* 标准的语法（必须放在最后） */
+}
+
+.w-gradually .w-portrait {
+	height: 176rpx;
+	width: 176rpx;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 80rpx;
+}
+
+.w-gradually .w-portrait .p-vi {
+	height: 100%;
+	width: 100%;
+	background-color: #FFFFFF;
+	background: rgba(250, 250, 250, 0.3);
+	-moz-border-radius: 100rpx;
+	-webkit-border-radius: 100rpx;
+	border-radius: 100rpx;
+}
+
+.w-gradually .w-portrait .p-vi .p-bg {
+	height: 160rpx;
+	width: 160rpx;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	top: 8rpx;
+	overflow: hidden;
+	-moz-border-radius: 100rpx;
+	-webkit-border-radius: 100rpx;
+	border-radius: 100rpx;
+}
+
+.w-gradually .w-portrait .p-vi .yh-image {
+	height: 100%;
+	width: 100%;
+}
+
+.w-gradually .w-login {
+	font-size: 32rpx;
+	line-height: 60rpx;
+	color: #FFFFFF;
+	height: 60rpx;
+	width: 400rpx;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 10rpx;
+	background-color: transparent;
+	display: block;
+}
+
+/*我的订单*/
+.w-order {
+	height: 280rpx;
+	width: 750rpx;
+	background-color: #FFFFFF;
+	margin-bottom: 10rpx;
+}
+
+.w-order .i-order {
+	height: 89rpx;
+	width: 100%;
+	border-bottom-width: 1rpx;
+	border-bottom-style: solid;
+	border-bottom-color: #d4d2d2;
+	display: flex;
+}
+
+.w-order .i-order .w-ti {
+	font-size: 30rpx;
+	line-height: 90rpx;
+	height: 100%;
+	margin-left: 20rpx;
+}
+
+.w-order .i-order .w-td {
+	width: 190rpx;
+	height: 90rpx;
+	margin-right: 10rpx;
+}
+
+.w-order .i-order .w-td .t-image {
+	height: 25rpx;
+	width: 15rpx;
+	padding-top: 34rpx;
+	display: block;
+	float: left;
+	padding-left: 10rpx;
+}
+
+.w-order .i-order .w-td .w-text {
+	font-size: 26rpx;
+	color: #999999;
+	float: left;
+	line-height: 90rpx;
+	height: 90rpx;
+}
+
+.w-order .w-options {
+	height: 190rpx;
+}
+
+.w-order .w-options .o-mk {
+	height: 135rpx;
+	padding-top: 35rpx;
+}
+
+.w-order .w-options .o-mk .o-xw {
+	font-size: 26rpx;
+	color: #5a5a5a;
+	text-align: center;
+}
+
+.w-order .w-options .o-mk .uimage {
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 10rpx;
+	display: block;
+}
+
+.w-order .w-options .o-mk .o-image1 {
+	height: 48rpx;
+	width: 58rpx;
+	padding-top: 10rpx;
+}
+
+.w-order .w-options .o-mk .o-image2 {
+	height: 45rpx;
+	width: 49rpx;
+	padding-top: 10rpx;
+}
+
+.w-order .w-options .o-mk .o-image3 {
+	height: 46rpx;
+	width: 59rpx;
+	padding-top: 10rpx;
+}
+
+.w-order .w-options .o-mk .o-image4 {
+	height: 47rpx;
+	width: 63rpx;
+	padding-top: 10rpx;
+}
+
+/*栏目*/
+.w-bar {
+	height: 90rpx;
+	width: 750rpx;
+	background-color: #FFFFFF;
+	margin-bottom: 5rpx;
+	display: flex;
+}
+
+.w-bar .b-ti {
+	width: 180rpx;
+	font-size: 30rpx;
+	line-height: 90rpx;
+	height: 90rpx;
+	margin-left: 20rpx;
+}
+
+.w-bar .b-image {
+	height: 25rpx;
+	width: 15rpx;
+	display: block;
+}
+
+.b-imagg {
+	height: 25rpx;
+	width: 15rpx;
+	margin-right: 20rpx;
+	padding-top: 32rpx;
+}

@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<view class="container">
+<!--搜索-->
+  <component-search search="{{search}}"></component-search>
+<!--筛选-->
+<view class="w-conditions">
+  <view class="c-smk">
+    <view class="c-xzm{{rollingSwiper == '' ? ' tick' : ''}}" data-type="" bind:tap="changeFilter" >综合全部</view>
+  </view>
+  <view class="c-smk">
+    <view class="c-xzm{{rollingSwiper == 'sold' ? ' tick' : ''}}" data-type="sold" bind:tap="changeFilter" >销量最高</view>
+  </view>
+  <view class="c-smk">
+    <view class="c-xzm{{rollingSwiper == 'price' ? ' tick' : ''}}" data-type="price" bind:tap="changeFilter" >价格升序</view>
+  </view>
+  <view class="c-smk">
+    <view class="c-xzm{{rollingSwiper == 'priceasc' ? ' tick' : ''}}" data-type="priceasc" bind:tap="changeFilter" >价格降序</view>
+  </view>
+</view>
+<!--商品列表模块-->
+  <view class="w-fresh">
+    <!--渲染开始-->
+    <view class="commodity" wx:for="{{hotList}}" wx:key="{{item.id}}" >
+      <view class="c-imvi" data-id="{{item.id}}" bind:tap="goDetail" ><image  class="c-image" src="{{item.image ||'/images/loss.png'}}" /></view>
+      <view class="letter">
+        <view class="c_view1 c_dl">{{item.name}}</view>
+        <view class="c-fl">
+          <view class="c-fll" >
+            <view class="c_view2 c_dl"> <text>￥</text>{{item.price}}</view>
+            <view class="c_view3 c_dl">已有{{item.sold}}人购买</view>
+          </view>
+          <view class="purchase" data-id="{{item.id}}" bind:tap="goDetail" >
+            <image class="p-image" src="/images/gwl01.png" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--渲染结束-->
+  </view>
+
+
+
+
+  <!--留白-->
+  <view class="w-white">{{noNumber}}</view>
+  <!--首页结束-->
+</view>
